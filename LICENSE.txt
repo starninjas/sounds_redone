@@ -8,4 +8,6 @@ Author of media (sound)
 All by (unless otherwise stated) StarNinjas - CC0
 
 - Mese Lamp place: digitl https://opengameart.org/content/electricity-sound-effects cc-by-3.0 (and mixed with default place sound)
+- Mese Ore break: default break glass sound
+- Iron Ore break: default metal footstep sound
 
