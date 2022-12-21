@@ -2,27 +2,55 @@
 -- SOFT/SOIL
 --
 
+-- Coniferous Litter
+
+local coniferous_litter_sound = default.node_sound_dirt_defaults({
+	footstep = {name = "coniferous_litter_footstep", gain = 0.3},
+})
+
+minetest.override_item("default:dirt_with_coniferous_litter", {
+	sounds = coniferous_litter_sound,
+})
+
+-- Rainforest Litter
+
+local rainforest_litter_sound = default.node_sound_dirt_defaults({
+	footstep = {name = "rainforest_litter_footstep", gain = 0.3},
+})
+
+minetest.override_item("default:dirt_with_rainforest_litter", {
+	sounds = rainforest_litter_sound,
+})
+
+-- Permafrost
+
+local permafrost_sound = default.node_sound_dirt_defaults({
+	footstep = {name = "permafrost_footstep", gain = 0.4},
+})
+
+minetest.override_item("default:permafrost", {
+	sounds = permafrost_sound,
+})
+
+local permafrost_stones_sound = default.node_sound_gravel_defaults({
+	footstep = {name = "permafrost_stones_footstep", gain = 0.15},
+})
+
+minetest.override_item("default:permafrost_with_stones", {
+	sounds = permafrost_stones_sound,
+})
+
+local permafrost_moss_sound = default.node_sound_dirt_defaults({
+	footstep = {name = "permafrost_moss_footstep", gain = 0.2},
+})
+
+minetest.override_item("default:permafrost_with_moss", {
+	sounds = permafrost_moss_sound,
+})
+
 --
 -- STONE/NON-SOFT
 --
-
--- Cobblestone
-
-local cobble_sound = default.node_sound_stone_defaults({
-	dug = {name = "cobble_dug", gain = 0.3},
-})
-
-minetest.override_item("default:cobble", {
-	sounds = cobble_sound,
-})
-
-minetest.override_item("default:desert_cobble", {
-	sounds = cobble_sound,
-})
-
-minetest.override_item("default:mossycobble", {
-	sounds = cobble_sound,
-})
 
 -- Coal
 
@@ -141,6 +169,7 @@ minetest.override_item("default:diamondblock", {
 
 local brick_block_sound = default.node_sound_stone_defaults({
 	dug = {name = "brick_dug"},
+	footstep = {name = "brick_footstep", gain = 0.3},
 })
 
 minetest.override_item("default:stonebrick", {
@@ -167,7 +196,32 @@ minetest.override_item("default:obsidianbrick", {
 	sounds = obsidian_sound,
 })
 
---and obsidian block
+-- Blocks
+
+local block_sound = default.node_sound_stone_defaults({
+	dug = {name = "brick_footstep"},
+	footstep = {name = "block_footstep", gain = 0.3},
+})
+
+minetest.override_item("default:stone_block", {
+	sounds = block_sound,
+})
+
+minetest.override_item("default:desert_stone_block", {
+	sounds = block_sound,
+})
+
+minetest.override_item("default:sandstone_block", {
+	sounds = block_sound,
+})
+
+minetest.override_item("default:desert_sandstone_block", {
+	sounds = block_sound,
+})
+
+minetest.override_item("default:silver_sandstone_block", {
+	sounds = block_sound,
+})
 
 minetest.override_item("default:obsidian_block", {
 	sounds = obsidian_sound,
@@ -192,6 +246,7 @@ minetest.override_item("default:papyrus", {
 
 local apple_wood_sound = default.node_sound_wood_defaults({
 	dug = {name = "wood_dug", gain = 0.2, pitch = 1.0},
+	footstep = {name = "wood_footstep", gain = 0.3, pitch = 1.0},
 })
 
 minetest.override_item("default:wood", {
@@ -202,6 +257,7 @@ minetest.override_item("default:wood", {
 
 local aspen_wood_sound = default.node_sound_wood_defaults({
 	dug = {name = "wood_dug", gain = 0.2, pitch = 1.1},
+ 	footstep = {name = "wood_footstep", gain = 0.3, pitch = 1.1},
 })
 
 minetest.override_item("default:aspen_wood", {
@@ -212,6 +268,7 @@ minetest.override_item("default:aspen_wood", {
 
 local junglewood_sound = default.node_sound_wood_defaults({
 	dug = {name = "wood_dug", gain = 0.2, pitch = 0.9},
+	footstep = {name = "wood_footstep", gain = 0.3, pitch = 0.9},
 })
 
 minetest.override_item("default:junglewood", {
@@ -222,6 +279,7 @@ minetest.override_item("default:junglewood", {
 
 local pine_wood_sound = default.node_sound_wood_defaults({
 	dug = {name = "wood_dug", gain = 0.2, pitch = 1.1},
+	footstep = {name = "wood_footstep", gain = 0.3, pitch = 1.1},
 })
 
 minetest.override_item("default:pine_wood", {
@@ -231,7 +289,7 @@ minetest.override_item("default:pine_wood", {
 -- Pine Needles
 
 local pine_needles_sound = default.node_sound_leaves_defaults({
-	dig = {name = "pine_needles_dig", gain = 0.5},
+	dig = {name = "pine_needles_dig", gain = 0.2},
 })
 
 minetest.override_item("default:pine_needles", {
@@ -242,6 +300,7 @@ minetest.override_item("default:pine_needles", {
 
 local acacia_wood_sound = default.node_sound_wood_defaults({
 	dug = {name = "wood_dug", gain = 0.2},
+	footstep = {name = "wood_footstep", gain = 0.3, pitch = 1.0},
 })
 
 minetest.override_item("default:acacia_wood", {
@@ -251,7 +310,7 @@ minetest.override_item("default:acacia_wood", {
 -- Acacia Leaves
 
 local acacia_leaves_sound = default.node_sound_leaves_defaults({
-	dug = {name = "pine_needles_dig", gain = 0.4},
+	dug = {name = "pine_needles_dig", gain = 0.2},
 })
 
 minetest.override_item("default:acacia_leaves", {
@@ -267,7 +326,8 @@ minetest.override_item("default:acacia_leaves", {
 local brick_sound = default.node_sound_stone_defaults({
 	dig = {name = "brick_dig"},
 	dug = {name = "brick_dug"},
-	place = {name = "brick_dug"}
+	place = {name = "brick_dug"},
+	footstep = {name = "brick_footstep", gain = 0.3},
 })
 
 minetest.override_item("default:brick", {
@@ -303,8 +363,9 @@ minetest.override_item("bones:bones", {
 --- Wool
 
 local wool_sound = default.node_sound_defaults({
-	dig = {name = "wool_dig", gain = 0.6},
-	place = {name = "wool_dig", gain = 0.6}
+	dig = {name = "wool_dig", gain = 0.2},
+	place = {name = "wool_dig", gain = 0.3},
+	footstep = {name = "wool_footstep", gain = 0.3}
 })
 
 minetest.override_item("wool:black", {
