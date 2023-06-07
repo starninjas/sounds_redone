@@ -10,4 +10,5 @@ All by (unless otherwise stated) StarNinjas - CC0
 - Mese Lamp place: digitl https://opengameart.org/content/electricity-sound-effects cc-by-3.0 (and mixed with default place sound)
 - Mese Ore break: default break glass sound
 - Iron Ore break: default metal footstep sound
-- Rainforest Litter Footstep: InspectorJ (www.jshaw.co.uk) of Freesound.org
+- Rainforest Litter footstep: InspectorJ (www.jshaw.co.uk) of Freesound.org
+- Steel Ladder footstep: https://freesound.org/people/Eelke/sounds/462598/

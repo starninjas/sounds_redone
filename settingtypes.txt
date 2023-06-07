@@ -1,0 +1,7 @@
+# This setting can increase how loud footsteps are.
+# Default is 0.1, which is a pretty average volume
+# for footsteps.
+#
+# The maximum this setting can be is 1.0;
+# the larger the number, the louder the footsteps will be.
+footstep_vol (Footstep Volume) float 0.1
